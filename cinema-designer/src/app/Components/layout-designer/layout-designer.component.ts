@@ -23,10 +23,10 @@ export class LayoutDesignerComponent {
 
     @Output('layout') layoutEmitter: EventEmitter<Row[]> = new EventEmitter<Row[]>()
 
-    private _nrRows: number = 0;
-    private _nrCols: number = 0;
+    _nrRows: number = 0;
+    _nrCols: number = 0;
 
-    private _seats: Row[] = [];
+    _seats: Row[] = [];
 
     ngOnInit() {
         this.updateLayout();

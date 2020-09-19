@@ -10,14 +10,14 @@ import { Row } from './Models/row';
 })
 export class AppComponent {
 
-  private nrRows: number = 0;
-  private nrCols: number = 0;
+  nrRows: number = 0;
+  nrCols: number = 0;
 
-  private groupAmounts: GroupAmount[] = [];
-  private problemType: ProblemType = ProblemType.Offline;
-  private filename: string = '';
+  groupAmounts: GroupAmount[] = [];
+  problemType: ProblemType = ProblemType.Offline;
+  filename: string = '';
 
-  private layout: Row[] = [];
+  layout: Row[] = [];
   
   setNrRows(value: number) {
     this.nrRows = value;

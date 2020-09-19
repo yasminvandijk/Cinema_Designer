@@ -16,19 +16,19 @@ export class SettingsComponent {
     @Output('filename') filenameEmitter: EventEmitter<string> = new EventEmitter<string>();
     @Output('download') downloadEmitter: EventEmitter<null> = new EventEmitter<null>();
 
-    private nrRows: number = 10;
-    private nrCols: number = 10;
+    nrRows: number = 10;
+    nrCols: number = 10;
     
-    private groupAmounts: GroupAmount[] = [];
-    private totalVisitors: number = 0;
+    groupAmounts: GroupAmount[] = [];
+    totalVisitors: number = 0;
 
-    private selectedProblemType: ProblemType = ProblemType.Offline;
-    private problemTypes: {value: ProblemType, name: string}[] = [
+    selectedProblemType: ProblemType = ProblemType.Offline;
+    problemTypes: {value: ProblemType, name: string}[] = [
         {value: ProblemType.Offline, name: "offline problem"},
         {value: ProblemType.Online, name: "online problem"}
     ]
 
-    private filename: string = 'layout';
+    filename: string = 'layout';
 
     ngOnInit() {
         for (let i = 1; i < 9; i++) {
