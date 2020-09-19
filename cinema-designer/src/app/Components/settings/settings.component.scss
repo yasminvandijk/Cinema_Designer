@@ -1,0 +1,29 @@
+:host > div {
+    margin: 20px;
+}
+
+input {
+    width: 100px;
+    height: 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.right {
+    float: right;
+}
+
+#groupAmounts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+mat-radio-group {
+    display: flex;
+    flex-direction: column;
+
+    mat-radio-button {
+        margin: 10px;
+    }
+}

@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<mat-toolbar>
+
+    <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <span>Cinema Layout Designer</span>
+
+</mat-toolbar>
+
+<mat-drawer-container>
+
+    <mat-drawer #drawer mode="side" opened>
+        <app-settings 
+            (nrRows)="setNrRows($event)"
+            (nrCols)="setNrCols($event)"
+            (groupAmounts)="setGroupAmounts($event)"
+            (problemType)="setProblemType($event)"
+            (filename)="setFilename($event)"
+            (download)="download()"
+            ></app-settings>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <app-layout-designer
+            [nrRows]="nrRows"
+            [nrCols]="nrCols"
+            (layout)="setLayout($event)"></app-layout-designer>
+    </mat-drawer-content>
+
+</mat-drawer-container>

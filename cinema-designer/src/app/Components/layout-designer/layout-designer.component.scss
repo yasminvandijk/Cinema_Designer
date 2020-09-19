@@ -1,0 +1,25 @@
+:host > * {
+    margin: 20px;
+}
+
+.row {
+    white-space: nowrap;
+}
+
+.seat {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10%;
+    background-color: darkred;
+    box-shadow: 0 0 8px black;
+}
+
+.noseat {
+    background-color: #222;
+}
+
+.seat:hover {
+    box-shadow: 0 0 8px whitesmoke;
+}

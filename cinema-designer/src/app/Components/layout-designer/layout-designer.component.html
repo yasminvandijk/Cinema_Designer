@@ -1,0 +1,3 @@
+<div class="row" *ngFor="let row of _seats; let rowIndex = index;">
+    <div class="seat" *ngFor="let col of row.seats; let colIndex = index;" (click)="setSeat(rowIndex, colIndex)" [class.noseat]="!getSeat(rowIndex, colIndex)"></div>
+</div>

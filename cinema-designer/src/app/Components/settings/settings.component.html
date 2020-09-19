@@ -1,0 +1,50 @@
+<!-- nr rows -->
+<div>
+    <span>nr. rows:</span>
+    <input type="number" class="right" min=1 max=100 #rows [value]="nrRows" (change)="setNrRows(rows.value)">
+</div>
+
+<!-- nr columns -->
+<div>
+    <span>nr. columns:</span>
+    <input type="number" class="right" min=1 max=100 #cols [value]="nrCols" (change)="setNrCols(cols.value)">
+</div>
+
+<!-- update layout -->
+<div>
+    <button mat-raised-button color="warn" (click)="updateLayout()">Update</button>
+</div>
+
+<mat-divider></mat-divider>
+
+<!-- groupsize, amounts -->
+<div id="groupAmounts">
+    <strong>groupsize</strong>
+    <strong>amount</strong>
+
+    <ng-container *ngFor="let groupAmount of groupAmounts">
+        <span>{{ groupAmount.groupSize }}</span>
+        <input type="number" min="0" #amount [value]="groupAmount.amount" (change)="setGroupAmount(groupAmount.groupSize, amount.value)">
+    </ng-container>
+</div>
+
+<!-- total visitors -->
+<div>
+    <span>total nr. of visitors: {{ totalVisitors }}</span>
+</div>
+
+<mat-divider></mat-divider>
+
+<!-- offline / online problem -->
+<div>
+    <mat-radio-group [(ngModel)]="selectedProblemType" (change)="problemTypeChanged()">
+        <mat-radio-button *ngFor="let type of problemTypes" [value]="type.value">{{ type.name }}</mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<!-- input, '.txt', download -->
+<div>
+    <input type="text" required #fname [value]="filename" (change)="setFilename(fname.value)">
+    <span>.txt</span>
+    <button mat-raised-button color="warn" class="right" (click)="download()">Download</button>
+</div>

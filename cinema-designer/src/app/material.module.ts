@@ -4,6 +4,7 @@ import {
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    MatRadioModule,
     MatSidenavModule,
     MatToolbarModule } from '@angular/material';
 
@@ -12,6 +13,7 @@ import {
         MatButtonModule,
         MatDividerModule,
         MatIconModule,
+        MatRadioModule,
         MatSidenavModule,
         MatToolbarModule
     ]
